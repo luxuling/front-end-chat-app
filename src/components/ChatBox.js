@@ -34,7 +34,12 @@ export default function ChatBox({ dis, setChatBox }) {
   } = ChatState();
 
   useEffect(() => {
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {
+      withCredentials: true,
+      extraHeaders: {
+    "my-custom-header": "abcd"
+  }
+  });
     socket.emit("setup", JSON.parse(localStorage.getItem("user")));
     socket.on("connected", () => setConnetedSocket(true));
     socket.on("typing", () => setIsTyping(true));
