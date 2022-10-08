@@ -91,6 +91,7 @@ export default function ChatBox({ dis, setChatBox }) {
           config
         );
         socket.emit("new message", data);
+        setFetchAgain(!fetchAgain)
         setMessages([...messages, data]);
       } catch (error) {
         throw new Error(error);
