@@ -8,7 +8,7 @@ import io from "socket.io-client";
 import Typing from "./animation/Typing";
 import sendIcon from "../img/send.png";
 import loadIcon from "../img/chatLoad.gif"
-const ENDPOINT = "https://rest-full-api-chat-production.up.railway.app/";
+const ENDPOINT = "https://rest-full-api-chat-production.up.railway.app";
 var socket, selectedChatCompare;
 
 export default function ChatBox({ dis, setChatBox }) {
