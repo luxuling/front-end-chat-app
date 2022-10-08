@@ -34,7 +34,9 @@ export default function ChatBox({ dis, setChatBox }) {
   } = ChatState();
 
   useEffect(() => {
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {
+      "rejectUnauthorized" : false
+    });
     socket.emit("setup", JSON.parse(localStorage.getItem("user")));
     socket.on("connected", () => setConnetedSocket(true));
     socket.on("typing", () => setIsTyping(true));
