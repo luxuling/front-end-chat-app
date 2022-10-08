@@ -30,7 +30,7 @@ export default function GroupDetail({ dis, setGroupDetail, setChatBox }) {
       };
 
       const { data } = await axios.put(
-        "/api/chat/rename",
+        "https://rest-full-api-chat-production.up.railway.app/api/chat/rename",
         {
           chatId: selectedChat._id,
           chatName: newName,
@@ -63,7 +63,7 @@ export default function GroupDetail({ dis, setGroupDetail, setChatBox }) {
           },
         };
         const { data } = await axios.put(
-          "/api/chat/removeusergroup",
+          "https://rest-full-api-chat-production.up.railway.app/api/chat/removeusergroup",
           {
             chatId: selectedChat._id,
             userId: user._id,

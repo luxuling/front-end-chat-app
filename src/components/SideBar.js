@@ -30,7 +30,7 @@ export default function SideBarActive({ act, pos, setSidebar }) {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.get(`/api/user?search=${search}`, config)
+      const { data } = await axios.get(`https://rest-full-api-chat-production.up.railway.app/api/user?search=${search}`, config)
       setResult(data)
       setLoading(false)
     } catch (error) {
@@ -51,7 +51,7 @@ export default function SideBarActive({ act, pos, setSidebar }) {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.post("/api/chat", { userId }, config)
+      const { data } = await axios.post("https://rest-full-api-chat-production.up.railway.app/api/chat", { userId }, config)
       setSelectedChat(data)
       setFetchAgain(!fetchAgain)
       setLoadingChat(false)

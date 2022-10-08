@@ -23,7 +23,7 @@ export default function MyChat({fetchAgain}) {
           Authorization: `Bearer ${userInfo.token}`,
         },
       };
-      const { data } = await axios.get("/api/chat", config)
+      const { data } = await axios.get("https://rest-full-api-chat-production.up.railway.app/api/chat", config)
       const res = await data
       setChats(res)
       setLoading(false)

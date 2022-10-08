@@ -52,7 +52,7 @@ export default function ChatBox({ dis, setChatBox }) {
         };
 
         const { data } = await axios.get(
-          `/api/message/${selectedChat._id}`,
+          `https://rest-full-api-chat-production.up.railway.app/api/message/${selectedChat._id}`,
           config
         );
         setMessages(data);
@@ -83,7 +83,7 @@ export default function ChatBox({ dis, setChatBox }) {
           },
         };
         const { data } = await axios.post(
-          "/api/message",
+          "https://rest-full-api-chat-production.up.railway.app/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,
@@ -111,7 +111,7 @@ export default function ChatBox({ dis, setChatBox }) {
           },
         };
         const { data } = await axios.post(
-          "/api/message",
+          "https://rest-full-api-chat-production.up.railway.app/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

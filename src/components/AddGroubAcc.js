@@ -25,7 +25,7 @@ export default function AddGroubAcc({dis,setAddNewUser}) {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.get(`/api/user?search=${query}`, config)
+      const { data } = await axios.get(`https://rest-full-api-chat-production.up.railway.app/api/user?search=${query}`, config)
       setSearch(data)
       setLoadingSearch(false)
       
@@ -60,7 +60,7 @@ export default function AddGroubAcc({dis,setAddNewUser}) {
         }
       }
 
-      const { data } = await axios.put("/api/chat/addusergroup", {
+      const { data } = await axios.put("https://rest-full-api-chat-production.up.railway.app/api/chat/addusergroup", {
         chatId: selectedChat._id,
         userId: usr._id
       }, config)

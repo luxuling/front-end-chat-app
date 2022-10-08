@@ -38,7 +38,7 @@ export default function SignUp() {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "https://rest-full-api-chat-production.up.railway.app/api/user",
         { name, email, password, pic },
         config
       );

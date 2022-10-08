@@ -2,7 +2,6 @@
   "name": "mern-chat-project",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://rest-full-api-chat-production.up.railway.app/",
   "dependencies": {
     "@magicbell/magicbell-react": "^10.3.1",
     "@testing-library/jest-dom": "^5.16.5",

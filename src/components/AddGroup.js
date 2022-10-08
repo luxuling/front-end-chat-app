@@ -28,7 +28,7 @@ export default function AddNewGroup({dis,setAddGroup}) {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.get(`/api/user?search=${query}`, config)
+      const { data } = await axios.get(`https://rest-full-api-chat-production.up.railway.app/api/user?search=${query}`, config)
       setSearch(data)
       setLoadingSearch(false)
     } catch (error) {
@@ -72,7 +72,7 @@ export default function AddNewGroup({dis,setAddGroup}) {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.post("/api/chat/group", {
+      const { data } = await axios.post("https://rest-full-api-chat-production.up.railway.app/api/chat/group", {
         name: groupName,
         users: JSON.stringify(selectedUser.map((re)=>re._id))
       }, config)

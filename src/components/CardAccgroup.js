@@ -19,7 +19,7 @@ export default function CardAccGroup({ name, pic, email,id,setLoading}) {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.put("/api/chat/removeusergroup", {
+      const { data } = await axios.put("https://rest-full-api-chat-production.up.railway.app/api/chat/removeusergroup", {
         chatId: selectedChat._id,
         userId: id
       }, config)
