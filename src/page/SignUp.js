@@ -197,7 +197,7 @@ export default function SignUp() {
           />
           <button
               className="material-symbols-outlined text-third mr-2"
-              onClick={showPass}>
+              onClick={showPass2}>
               visibility
             </button>
           </div>

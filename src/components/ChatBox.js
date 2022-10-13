@@ -179,7 +179,7 @@ export default function ChatBox({ dis, setChatBox }) {
       )}
 
       <div
-        className={`fixed flex top-0 lg:h-[613px] lg:top-[83px] flex-col bottom-3 lg:rounded-md z-[555] bg-white h-full w-full lg:w-[900px] lg:right-0 lg: ${dis} transition-all ease-in-out duration-200`}>
+        className={`fixed flex top-0 lg:h-[583px] lg:top-[80px] flex-col bottom-3 lg:rounded-md z-[555] bg-white h-full w-full lg:w-[900px] lg:right-0 lg: ${dis} transition-all ease-in-out duration-200`}>
         {!groupDetail ? (
           <GroupDetail
             dis={"invisible opacity-0"}

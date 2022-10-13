@@ -48,9 +48,7 @@ export default function Home() {
             :
             <SignUp />
           }
-        <footer className="mt-auto text-center text-sm text-third">
-          <h3><span className="text-pink-500">❤</span> Desaign By Yama && Develop By LixuLing <span className="text-pink-500">❤</span></h3>
-        </footer>
+        
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ export default function SideBarActive({ act, pos, setSidebar }) {
   const [search, setSearch] = useState()
   const [loadingChat, setLoadingChat] = useState()
   const [loading, setLoading] = useState()
-  const { user, setSelectedChat,fetchAgain, setFetchAgain } = ChatState()
+  const { user, setSelectedChat,fetchAgain, setFetchAgain,chats } = ChatState()
   
   const searchHandler = async (event) => {
 
@@ -54,6 +54,9 @@ export default function SideBarActive({ act, pos, setSidebar }) {
       const { data } = await axios.post("https://rest-full-api-chat-production.up.railway.app/api/chat", { userId }, config)
       setSelectedChat(data)
       setFetchAgain(!fetchAgain)
+      if (chats.length === 0) {
+        window.location.reload();
+      }
       setLoadingChat(false)
       setSidebar(false)
     } catch (error) {

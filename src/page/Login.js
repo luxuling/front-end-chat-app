@@ -67,7 +67,7 @@ export default function Login() {
     }
   }
   return (
-    <div className="py-5">
+    <div className="py-5 flex flex-col h-full">
       <form action="">
         <label htmlFor="" className="text-slate-900">
           Email address
@@ -135,6 +135,9 @@ export default function Login() {
           Get guest account
         </button>
       </div>
+      <footer className="mt-auto text-center text-sm text-third">
+          <h3><span className="text-pink-500">❤</span> Desaign By Yama && Develop By LixuLing <span className="text-pink-500">❤</span></h3>
+        </footer>
     </div>
   );
 }
