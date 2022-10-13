@@ -54,9 +54,7 @@ export default function SideBarActive({ act, pos, setSidebar }) {
       const { data } = await axios.post("https://rest-full-api-chat-production.up.railway.app/api/chat", { userId }, config)
       setSelectedChat(data)
       setFetchAgain(!fetchAgain)
-      if (chats.length === 0) {
-        window.location.reload();
-      }
+      window.location.reload();
       setLoadingChat(false)
       setSidebar(false)
     } catch (error) {
