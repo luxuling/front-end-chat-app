@@ -58,6 +58,8 @@ export default function SignUp() {
         icon: "error",
         title: "Ooops",
         text: err
+      }).then(() => {
+        setLoading(false)
       });
     }
   }
